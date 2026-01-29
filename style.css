@@ -1,0 +1,226 @@
+/* =========================================
+   DESIGN TOKENS TEMPLATE
+   ========================================= */
+:root {
+  /* ---------- COLORS ---------- */
+  /* Basisfarben */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Primär- / Sekundärfarben */
+  --color-primary: var(--grey-950);
+  --color-secondary: var(--grey-500);
+
+  /* Graustufen */
+  --grey-950: #1D2026;
+  --grey-500: #69707D;
+  --grey-300: #C3CAD9;
+  --grey-100: #E4E9F2;
+
+
+  /* Orange */
+  --orange-500: #FF7E1B;
+  --orange-300: #FFAB6A;
+
+  /* ---------- TYPOGRAPHY ---------- */
+ /* ---------- TYPE PRESETS ---------- */
+/* Kumbh Sans */
+
+    --font-sans: "Kumbh Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+    /* tp-1 – Headline XL */
+    --tp-1-size: 44px;
+    --tp-1-line: 48px;
+    --tp-1-track: 0;
+    --tp-1-weight: 700;
+
+    /* tp-2 – Headline L */
+    --tp-2-size: 28px;
+    --tp-2-line: 32px;
+    --tp-2-track: 0;
+    --tp-2-weight: 700;
+
+    /* tp-3b – Body Bold */
+    --tp-3b-size: 16px;
+    --tp-3b-line: 26px;
+    --tp-3b-track: 0;
+    --tp-3b-weight: 700;
+
+    /* tp-3 – Body Regular */
+    --tp-3-size: 16px;
+    --tp-3-line: 26px;
+    --tp-3-track: 0;
+    --tp-3-weight: 400;
+
+    /* tp-4 – Small Body */
+    --tp-4-size: 15px;
+    --tp-4-line: 26px;
+    --tp-4-track: 0;
+    --tp-4-weight: 400;
+
+    /* tp-5 – Label / Overline */
+    --tp-5-size: 13px;
+    --tp-5-line: 16px;
+    --tp-5-track: 2px;
+    --tp-5-weight: 700;
+
+    /* tp-6 – Meta / Small Caps */
+    --tp-6-size: 12px;
+    --tp-6-line: 15px;
+    --tp-6-track: 1.85px;
+    --tp-6-weight: 700;
+
+
+  /* ---------- SPACING ---------- */
+  --space-128: 8rem;
+  --space-104: 6.5rem;
+  --space-96: 6rem;
+  --space-80: 5rem;
+  --space-72: 4.5rem;
+  --space-64: 4rem;
+  --space-58: 3.5rem;
+  --space-48: 3rem;
+  --space-40: 2.5rem;
+  --space-32: 2rem;
+  --space-24: 1.5rem;
+  --space-16: 1rem;
+  --space-8: 0.5rem;
+  --space-4: 0.25rem;
+  --space-0: 0;
+
+  /* ---------- RADIUS / SHADOWS ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+
+  /* ---------- BREAKPOINTS ---------- */
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}
+
+/* =========================================
+   FONT-FACE TEMPLATE
+   ========================================= */
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("./fonts/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =========================================================
+   TYPE UTILITIES
+   ========================================================= */
+.tp-1 {
+  font-size: var(--tp-1-size);
+  line-height: var(--tp-1-line);
+  letter-spacing: var(--tp-1-track);
+  font-weight: var(--tp-1-weight);
+}
+
+.tp-2 {
+  font-size: var(--tp-2-size);
+  line-height: var(--tp-2-line);
+  letter-spacing: var(--tp-2-track);
+  font-weight: var(--tp-2-weight);
+}
+
+.tp-3 {
+  font-size: var(--tp-3-size);
+  line-height: var(--tp-3-line);
+  letter-spacing: var(--tp-3-track);
+  font-weight: var(--tp-3-weight);
+}
+.tp-3b {
+  font-size: var(--tp-3b-size);
+  line-height: var(--tp-3b-line);
+  letter-spacing: var(--tp-3b-track);
+  font-weight: var(--tp-3b-weight);
+}
+.tp-4 {
+  font-size: var(--tp-4-size);
+  line-height: var(--tp-4-line);
+  letter-spacing: var(--tp-4-track);
+  font-weight: var(--tp-4-weight);
+}
+
+.tp-5 {
+  font-size: var(--tp-5-size);
+  line-height: var(--tp-5-line);
+  letter-spacing: var(--tp-5-track);
+  font-weight: var(--tp-5-weight);
+}
+
+.tp-6 {
+  font-size: var(--tp-6-size);
+  line-height: var(--tp-6-line);
+  letter-spacing: var(--tp-6-track);
+  font-weight: var(--tp-6-weight);
+}
+
+
+/* =========================================================
+   MODERN CSS RESET
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--tp-3-size);
+  line-height: var(--tp-3-line);
+  letter-spacing: var(--tp-3-track);
+  font-weight: var(--tp-3-weight);
+  color: var(--color-primary);
+  background: var(--white);
+}
