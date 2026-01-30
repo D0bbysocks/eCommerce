@@ -94,26 +94,40 @@
     <section class="product-content">
       <header>
         <p class="company-name">Sneaker Company</p>
-        <h1>Fall Limited Edition Sneakers</h1>
+        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
       </header>      
       <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
       <div class="price-wrapper">
         <div class="price-left">
-          <p class="price">
+          <p class="price tp-2">
             <span class="sr-only">Current price:</span>
             $125.00
           </p>
-          <p class="discount">
+          <p class="discount tp-3b">
             <span class="sr-only">Discount:</span>
             50%
           </p>
         </div>
         <div class="price-right">
-          <p class="uvp">
-            span class="sr-only">Original price:</span>
+          <p class="uvp tp-5">
+            <span class="sr-only">Original price:</span>
             $250.00
           </p>
         </div>
+      </div>
+
+      <div class="amount-wrapper">
+        <button class="amount__minus" type="button" data-minus aria-label="Decrease quantity">
+          <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
+        </button>
+        
+        <p class="amount__count tp-3b" aria-live="polite">
+          <span class="sr-only">Quantity:</span>
+          0
+        </p>
+        <button class="amount__plus" type="button" data-plus aria-label="Increase quantity">
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+        </button>
       </div>
 
     </section>

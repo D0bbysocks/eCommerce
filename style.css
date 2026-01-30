@@ -16,6 +16,7 @@
   --grey-500: #69707D;
   --grey-300: #C3CAD9;
   --grey-100: #E4E9F2;
+  --grey-50: #F6F8FD;
 
 
   /* Orange */
@@ -231,6 +232,9 @@ a {
    LAYOUT
    ========================================================= */
 body {
+  max-width: 1400px;
+  margin-inline: auto;
+
   font-family: var(--font-sans);
   font-size: var(--tp-3-size);
   line-height: var(--tp-3-line);
@@ -246,6 +250,7 @@ body {
     display: flex;
     justify-content: space-between;
 
+    margin-bottom: var(--space-24);
     padding-inline: var(--space-24);
 }
 
@@ -281,7 +286,6 @@ body {
 /* main */
 
 /* Slider */
-
 .carousel {
   position: relative;
 }
@@ -350,4 +354,70 @@ body {
 
 .carousel__btn svg {
   display: block;
+}
+
+
+
+/* Card-Content */
+.product-content {
+  padding: var(--space-24);
+}
+
+.company-name,
+.product-name {
+  margin-bottom: var(--space-16);
+}
+
+.product-description,
+.price-wrapper {
+  margin-bottom: var(--space-32);
+}
+
+.product-description {
+  color: var(--grey-500);
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-left {
+  display: flex;
+  gap: var(--space-16);
+}
+
+
+.price {
+  color: var(--grey-950);
+
+}
+
+.discount {
+  background-color: var(--grey-950);
+  color: var(--white);
+
+  width: 51px;
+  height: 27px;
+
+  text-align: center;
+
+  border-radius: var(--radius-sm);
+}
+
+.uvp {
+  color: var(--grey-500);
+  text-decoration: line-through;
+}
+
+
+.amount-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding: var(--space-16);
+  height: 56px;
+
+  background-color: var(--grey-50);
+  border-radius: var(--radius-md);
 }
