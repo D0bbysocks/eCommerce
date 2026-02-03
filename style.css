@@ -499,14 +499,18 @@ body {
 
 
 /* Menu */
+.nav-toggle {
+  z-index: 999;
+}
+
 .menu {
-  
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 
-
+  width: 250px;
+  height: 100svh;
   padding: var(--space-24);
 
   background-color: var(--white);
@@ -515,10 +519,79 @@ body {
 .menu-list {
   display: grid;
   gap: var(--space-24);
+
+  padding-top: 56px;
 }
 
 [hidden] {
   display: none !important;
+}
+
+/* Burger Icon */
+.icon-burger .line {
+  transform-box: fill-box;     /* super wichtig bei SVG */
+  transform-origin: center;    /* jetzt erst sinnvoll */
+  transition: transform 250ms ease, opacity 200ms ease;
+}
+
+.nav-toggle.is-open .line-mid {
+  opacity: 0;
+}
+
+.nav-toggle.is-open .line-top {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open .line-bot {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+
+/* Cart Items DIsplay */
+.cart__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+
+  padding-inline: var(--space-24);
+}
+
+.cart__items__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+
+  color: var(--grey-500);
+}
+
+.cart__item__thumb {
+  width: 50px;
+  height: 50px;
+
+  border-radius: var(--radius-sm);
+}
+
+.cart__item__price-wrapper {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.cart__sum {
+  color: var(--grey-950);
+}
+
+.cart__items__delete {
+  width: 14px;
+  height: 16px;
+  background-image: url(./images/icon-delete.svg);
+}
+
+.checkout {
+  padding: var(--space-16) var(--space-104);
+  border-radius: var(--radius-md);
+
+  background-color: var(--orange-500);
 }
 
 

@@ -31,7 +31,7 @@
         </svg>
       </button>
 
-      <div class="menu" hidden>
+      <div class="menu tp-3b" hidden>
         <ul class="menu-list">
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -62,7 +62,22 @@
 
       <div class="cart" hidden>
         <div class="card-title tp-3b"><p>Cart</p></div>
-        <div class="cart-content tp-3b"><p>Your cart ist empty.</p></div>
+        <div class="cart-content tp-3b">
+          <div class="cart__empty" data-cart-empty><p id="cart-info"></p></div></div>
+          <div class="cart__items" hidden data-cart-items>
+            <div class="cart__items__item">
+              <img src="./images/image-product-1-thumbnail.jpg" class="cart__item__thumb" alt="">
+              <div class="cart__item__content">
+                <p class="cart__item__title">Fall Limited Edition Sneakers</p>
+                <div class="cart__item__price-wrapper">
+                  <p><span class="cart__item__price">$125.00</span> x <span class="cart__item__quantity">3</span></p>
+                  <p class="cart__sum tp-3b">$375.00</p>
+                </div>
+              </div>
+              <button class="cart__items__delete" type="button"></button>
+            </div>
+            <button type="button" class="checkout tp-3b">Checkout</button>
+          </div>
       </div>
       
       <button
