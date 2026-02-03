@@ -189,6 +189,25 @@ cartBtn.addEventListener("click", () => {
 
 cartIcon.addEventListener("click", showCart);
 
+
+// Escape menu Close
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  // Cart schließen
+  if (!cartDisplay.hidden) {
+    cartDisplay.hidden = true;
+    cartIcon.setAttribute("aria-expanded", "false");
+  }
+
+  // Menu schließen
+  if (!menu.hidden) {
+    menu.hidden = true;
+    menuBtn.classList.remove("is-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+});
+
 /* =========================
    Init
 ========================= */

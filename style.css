@@ -280,6 +280,12 @@ body {
     height: 15px;
 }
 
+
+.nav-toggle[aria-expanded="true"]:hover svg rect,
+.nav-toggle[aria-expanded="true"]:focus-visible svg rect {
+  fill: var(--orange-500);
+}
+
 .user-icon {
     width: 50px;
     height: 50px;
@@ -354,6 +360,13 @@ body {
   height: 40px;
   border-radius: 50%;
 }
+
+.carousel__btn:hover svg path,
+.carousel__btn:focus-visible svg path {
+  transition: stroke 150ms ease;
+  stroke: var(--orange-500);
+}
+
 
 .carousel__btn[data-prev] {
   left: var(--space-16);
@@ -521,6 +534,11 @@ body {
   gap: var(--space-24);
 
   padding-top: 56px;
+}
+
+.menu-list a:hover,
+.menu-list a:focus-visible {
+  color: var(--orange-500);
 }
 
 [hidden] {
