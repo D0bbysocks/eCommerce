@@ -6,6 +6,9 @@ const slides = Array.from(carousel.querySelectorAll(".carousel__slide"));
 const prevBtn = carousel.querySelector("[data-prev]");
 const nextBtn = carousel.querySelector("[data-next]");
 
+const thumbGallery = document.querySelector(".thumb-gallery");
+const thumbPictures = document.querySelectorAll(".thumb");
+
 /* =========================
    DOM: Amount / Counter
 ========================= */
@@ -197,6 +200,7 @@ function screenCheck() {
   if (isDesktop) {
     // Desktop-Modus
     menu.hidden = false;
+    thumbGallery.hidden = false;
     menuBtn.classList.remove("is-open");
     menuBtn.setAttribute("aria-expanded", "false");
   } else {
@@ -204,6 +208,7 @@ function screenCheck() {
     menu.hidden = true;
     menuBtn.classList.remove("is-open");
     menuBtn.setAttribute("aria-expanded", "false");
+    thumbGallery.hidden = true;
   }
 }
 
@@ -233,3 +238,13 @@ document.addEventListener("keydown", (event) => {
 showAmount(); // initial UI sync
 screenCheck();
 
+
+thumbPictures.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const i = Number(btn.dataset.index);
+    setActive(i);
+
+    thumbPictures.forEach((b) => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+  })
+});
