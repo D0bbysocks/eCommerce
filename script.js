@@ -190,6 +190,25 @@ cartBtn.addEventListener("click", () => {
 cartIcon.addEventListener("click", showCart);
 
 
+
+function screenCheck() {
+  const isDesktop = window.innerWidth >= 1024;
+
+  if (isDesktop) {
+    // Desktop-Modus
+    menu.hidden = false;
+    menuBtn.classList.remove("is-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  } else {
+    // Mobile-Modus (Startzustand: zu)
+    menu.hidden = true;
+    menuBtn.classList.remove("is-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+}
+
+window.addEventListener("resize", screenCheck);
+
 // Escape menu Close
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
@@ -212,3 +231,5 @@ document.addEventListener("keydown", (event) => {
    Init
 ========================= */
 showAmount(); // initial UI sync
+screenCheck();
+
