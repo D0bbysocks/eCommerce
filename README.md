@@ -32,11 +32,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](#screenshot.jpg)
 
 ### Links
 
-- Live Site URL: *to be added*
+- Live Site URL: *[Page](https://d0bbysocks.github.io/eCommerce/)*
 
 ## My process
 
