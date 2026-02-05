@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./screenshot.jpg" alt="Screenshot of the project" width="800" style="max-width: 100%; height: auto;">
+<img src="./screenshot.jpg" alt="Screenshot of the project" style="max-width: 100%; height: auto;">
 
 
 ### Links
