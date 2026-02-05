@@ -101,17 +101,17 @@
 
         <div class="carousel__viewport" aria-live="polite">
           <ul class="carousel__sliders">
-            <li class="carousel__slide is-active">
-              <img src="./images/image-product-1.jpg " alt="Produktansicht von vorne">
+            <li class="carousel__slide is-active" style="--pos: 50% 57%;">
+              <button class="lightboxBtnOpen"><img src="./images/image-product-1.jpg " alt="Produktansicht von vorne"></button>
             </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <img src="./images/image-product-2.jpg" alt="Produktansicht von der Seite">
+            <li class="carousel__slide" aria-hidden="true" style="--pos: 50% 5%;">
+              <button class="lightboxBtnOpen"><img src="./images/image-product-2.jpg" alt="Produktansicht von der Seite"></button>
             </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <img src="./images/image-product-3.jpg" alt="Produktansicht von der Seite">
+            <li class="carousel__slide" aria-hidden="true" style="--pos: 50% 10%;">
+              <button class="lightboxBtnOpen"><img src="./images/image-product-3.jpg" alt="Produktansicht von der Seite"></button>
             </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <img src="./images/image-product-4.jpg" alt="Produktansicht von der Seite">
+            <li class="carousel__slide" aria-hidden="true" style="--pos: 50% 10%;">
+              <button class="lightboxBtnOpen"><img src="./images/image-product-4.jpg" alt="Produktansicht von der Seite"></button>
             </li>
           </ul>
         </div>
@@ -121,7 +121,7 @@
         </button>
         </div>
 
-        <div class="thumb-gallery">
+        <div class="thumb-gallery" data-thumb-gallery>
           <ul class="thumb-list">
             <li>
               <button class="thumb is-active" data-index="0" aria-current="true">
@@ -202,7 +202,7 @@
 
       </section>
         <!-- Lightbox (Modal) -->
-        <div class="lightbox">
+        <div class="lightbox" hidden>
           <!-- Overlay (klickbar zum Schließen) -->
           <div class="lightbox__overlay" data-lightbox-close></div>
 
@@ -266,7 +266,7 @@
             </div>
 
             <!-- Thumbnails (Lightbox) -->
-            <div class="thumb-gallery">
+            <div class="thumb-gallery" data-lightbox-thumb-gallery>
               <ul class="thumb-list">
                 <li>
                   <button class="thumb is-active" type="button" data-lightbox-thumb data-index="0" aria-current="true">

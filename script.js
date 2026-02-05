@@ -6,8 +6,9 @@ const slides = Array.from(carousel.querySelectorAll(".carousel__slide"));
 const prevBtn = carousel.querySelector("[data-prev]");
 const nextBtn = carousel.querySelector("[data-next]");
 
-const thumbGallery = document.querySelector(".thumb-gallery");
-const thumbPictures = document.querySelectorAll(".thumb");
+const thumbs = document.querySelector("[data-thumb-gallery]");
+const thumbGallery = document.querySelector("[data-thumb-gallery]");
+const thumbPictures = Array.from(thumbs.querySelectorAll(".thumb"));
 
 /* =========================
    DOM: Amount / Counter
@@ -42,6 +43,27 @@ const productEl = document.querySelector(".product-content");
 const productId = productEl.dataset.productId;
 const price = Number(productEl.dataset.productPrice);
 const title = productEl.dataset.productTitle;
+
+/* =========================
+   DOM: Lightbox
+========================= */
+const lightboxCarousel = document.querySelector("[data-lightbox-carousel]");
+const lightboxSlides = Array.from(lightboxCarousel.querySelectorAll(".carousel__slide"));
+const lightboxClose = document.querySelectorAll("[data-lightbox-close]");
+const lightbox = document.querySelector(".lightbox");
+const lightboxOpen = document.querySelectorAll(".lightboxBtnOpen");
+
+const lightThumbs = document.querySelector("[data-lightbox-thumb-gallery]");
+const lightThumbPictures = Array.from(lightThumbs.querySelectorAll(".thumb"));
+
+
+// =========================
+// Helpers
+// =========================
+function isDesktop() {
+  return window.innerWidth >= 1024; // dein Desktop-Breakpoint
+}
+
 
 /* =========================
    State
@@ -230,7 +252,53 @@ document.addEventListener("keydown", (event) => {
     menuBtn.classList.remove("is-open");
     menuBtn.setAttribute("aria-expanded", "false");
   }
+
+  // Lightbox schließen
+  if (!lightbox.hidden) {
+    lightbox.hidden = true;
+  }
 });
+
+/* =========================
+   Lightbox
+========================= */
+let lightboxIndex = 0;
+
+function closeLightbox() {
+  lightbox.hidden = true;
+}
+
+lightboxClose.forEach((btn) => {
+  btn.addEventListener("click", closeLightbox)
+});
+
+function openLightbox() {
+  if (!isDesktop()) return;
+  lightbox.hidden = false;
+  setActiveLightbox(index);
+}
+
+
+function setActiveLightbox(newIndex) {
+  
+  lightboxSlides[lightboxIndex].classList.remove("is-active");
+  lightboxSlides[lightboxIndex].setAttribute("aria-hidden", "true");
+  lightThumbPictures[lightboxIndex].classList.remove("is-active");
+
+  lightboxIndex = newIndex;
+
+  lightboxSlides[lightboxIndex].classList.add("is-active");
+  lightboxSlides[lightboxIndex].setAttribute("aria-hidden", "false");
+  lightThumbPictures[lightboxIndex].classList.add("is-active");
+}
+
+
+
+lightboxOpen.forEach((btn) => {
+  btn.addEventListener("click", openLightbox);
+});
+
+
 
 /* =========================
    Init
@@ -245,6 +313,16 @@ thumbPictures.forEach((btn) => {
     setActive(i);
 
     thumbPictures.forEach((b) => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+  })
+});
+
+lightThumbPictures.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const i = Number(btn.dataset.index);
+    setActiveLightbox(i);
+
+    lightThumbPictures.forEach((b) => b.classList.remove("is-active"));
     btn.classList.add("is-active");
   })
 });

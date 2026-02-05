@@ -334,13 +334,20 @@ body {
   pointer-events: auto;
 }
 
+.carousel__slide > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+
 /* Bild füllt den Viewport */
 .carousel__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 65%;
-  display: block;
+  object-position: var(--pos, 50% 50%);
 }
 
 /* Reduced motion respektieren */
@@ -566,9 +573,17 @@ body {
   padding-top: 56px;
 }
 
+.menu-list a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 50px;
+  text-decoration-thickness: 4px;
+  transition: text-decoration-color 150ms ease;
+}
+
 .menu-list a:hover,
 .menu-list a:focus-visible {
-  color: var(--orange-500);
+  text-decoration-color: var(--orange-500);
 }
 
 [hidden] {
