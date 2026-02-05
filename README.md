@@ -32,7 +32,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](#screenshot.jpg)
+<img src="./screenshot.jpg" alt="Screenshot of the project" width="800">
+
 
 ### Links
 
