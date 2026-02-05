@@ -298,6 +298,26 @@ body {
   height: 24px;
 }
 
+.cart-button {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -7px;
+  right: -10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 13px;
+  border-radius: var(--radius-lg);
+
+  background-color: var(--orange-500);
+  color: var(--white);
+}
+
 /* main */
 
 /* Slider */
@@ -497,7 +517,6 @@ body {
   mask: url("./images/icon-cart.svg") no-repeat center / contain;
   -webkit-mask: url("./images/icon-cart.svg") no-repeat center / contain;
 }
-
 
 
 /* Cart */
@@ -767,7 +786,7 @@ body {
   }
 
   .carousel__btn {
-    display: none;
+    /* display: none; */
   }
 
   .carousel__viewport {
@@ -857,6 +876,53 @@ body {
   backdrop-filter: blur(2px);
 
 }
+
+.lightbox__carousel {
+  position: relative;
+}
+
+/* Test */
+.lightbox-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.lightbox-carousel__btn:hover svg path,
+.lightbox-carousel__btn:focus-visible svg path {
+  transition: stroke 150ms ease;
+  stroke: var(--orange-500);
+}
+
+
+.lightbox-carousel__btn[data-lightbox-prev] {
+  left: var(--space-16);
+}
+
+.lightbox-carousel__btn[data-lightbox-next] {
+  right: var(--space-16);
+}
+
+.lightbox-carousel__btn svg {
+  display: block;
+}
+
+
+
+
+
+
+
 
 .lightbox .carousel__viewport {
   margin-bottom: var(--space-40);
