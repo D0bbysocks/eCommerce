@@ -706,6 +706,11 @@ body {
   }
 }
 
+@media (max-width: 1023px) {
+  .carousel__slide button {
+    cursor: default
+  }
+}
 
 @media (min-width: 1024px) {
   /* =========================
@@ -786,7 +791,7 @@ body {
   }
 
   .carousel__btn {
-    /* display: none; */
+    display: none;
   }
 
   .carousel__viewport {
